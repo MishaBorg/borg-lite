@@ -2,62 +2,76 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gadget Collection — Borg</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Top Gadget Picks - Borg</title>
   <link rel="stylesheet" href="assets/style.css" />
-  <meta name="description" content="A curated list of 10+ trending smart gadgets from Amazon, AliExpress, and Gearbest with links and brief descriptions." />
+  <style>
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+    .card {
+      background: #1a1a1a;
+      padding: 1rem;
+      border-radius: 1rem;
+      box-shadow: 0 0 10px rgba(255,255,255,0.05);
+      transition: transform 0.2s ease;
+    }
+    .card:hover {
+      transform: scale(1.03);
+    }
+    .card img {
+      width: 100%;
+      border-radius: 0.5rem;
+    }
+    .card a {
+      display: block;
+      margin-top: 0.5rem;
+      text-align: center;
+      color: #fff;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-  <main class="center" style="max-width: 800px; text-align:left;">
-    <h1>Gadget Collection</h1>
-    <p>Here’s a handpicked list of the best smart gadgets available today across popular platforms.</p>
+  <main class="center">
+    <h1>Top Smart Gadget Picks</h1>
+    <p>Curated selection of useful, trending smart devices available now on Amazon and AliExpress.</p>
 
-    <ul>
-      <li><strong>1. Echo Dot (4th Gen)</strong> — Compact smart speaker with Alexa.<br />
-        <a href="https://www.amazon.com/dp/B07FZ8S74R" target="_blank" rel="noopener">Amazon Link</a>
-      </li>
+    <section class="grid">
+      <div class="card">
+        <img src="https://m.media-amazon.com/images/I/61jR8IjLZFL._AC_SL1500_.jpg" alt="Smart Plug Wi-Fi">
+        <a href="https://www.amazon.com/dp/B089DR29T6" target="_blank">Smart Wi-Fi Plug</a>
+      </div>
+      <div class="card">
+        <img src="https://m.media-amazon.com/images/I/61M60d4hJgL._AC_SL1500_.jpg" alt="Fitness Tracker">
+        <a href="https://www.amazon.com/dp/B08DFZ2HLZ" target="_blank">Fitness Tracker</a>
+      </div>
+      <div class="card">
+        <img src="https://ae01.alicdn.com/kf/S0c5a8f7fb3c247cf8109e5b75dfb7a2bP.jpg" alt="AliExpress Smart Light">
+        <a href="https://www.aliexpress.com/item/1005003771495140.html" target="_blank">Smart Light Bulb</a>
+      </div>
+      <div class="card">
+        <img src="https://m.media-amazon.com/images/I/71U5UgD8o5L._AC_SL1500_.jpg" alt="Robot Vacuum Cleaner">
+        <a href="https://www.amazon.com/dp/B09YVJ9V77" target="_blank">Robot Vacuum</a>
+      </div>
+      <div class="card">
+        <img src="https://ae01.alicdn.com/kf/Hd05fa1362eeb4f049d5394dbb7c0cf63T.jpg" alt="AliExpress Smartwatch">
+        <a href="https://www.aliexpress.com/item/1005004768236970.html" target="_blank">Smartwatch Pro</a>
+      </div>
+      <div class="card">
+        <img src="https://m.media-amazon.com/images/I/61JkJuG+juL._AC_SL1500_.jpg" alt="Security Camera">
+        <a href="https://www.amazon.com/dp/B07Z6J3GFD" target="_blank">Security Camera</a>
+      </div>
+    </section>
 
-      <li><strong>2. Xiaomi Mi Smart Band 7</strong> — Affordable fitness tracker with heart rate monitor.<br />
-        <a href="https://www.aliexpress.com/item/1005004639840399.html" target="_blank" rel="noopener">AliExpress Link</a>
-      </li>
-
-      <li><strong>3. Roborock S7 Robot Vacuum</strong> — Efficient robot vacuum with smart mapping.<br />
-        <a href="https://www.gearbest.com/robot-vacuum-cleaner/pp_009023131820.html" target="_blank" rel="noopener">Gearbest Link</a>
-      </li>
-
-      <li><strong>4. Ring Video Doorbell 3</strong> — Video doorbell with motion detection.<br />
-        <a href="https://www.amazon.com/dp/B0849LQ7TX" target="_blank" rel="noopener">Amazon Link</a>
-      </li>
-
-      <li><strong>5. BlitzWolf BW-FLB5</strong> — Smart LED light bulb with app control.<br />
-        <a href="https://www.aliexpress.com/item/1005002298391887.html" target="_blank" rel="noopener">AliExpress Link</a>
-      </li>
-
-      <li><strong>6. Xiaomi Smart Home Hub</strong> — Central hub for all Xiaomi smart devices.<br />
-        <a href="https://www.gearbest.com/smart-home/pp_009527334176.html" target="_blank" rel="noopener">Gearbest Link</a>
-      </li>
-
-      <li><strong>7. Kindle Paperwhite</strong> — Waterproof e-reader with adjustable light.<br />
-        <a href="https://www.amazon.com/dp/B07CXG6C9W" target="_blank" rel="noopener">Amazon Link</a>
-      </li>
-
-      <li><strong>8. Tapo Smart Plug</strong> — Easy-to-use smart plug with scheduling.<br />
-        <a href="https://www.aliexpress.com/item/1005002877731246.html" target="_blank" rel="noopener">AliExpress Link</a>
-      </li>
-
-      <li><strong>9. Xiaomi Mi Air Purifier 3H</strong> — Smart air purifier with app control.<br />
-        <a href="https://www.gearbest.com/air-purifier/pp_009325012486.html" target="_blank" rel="noopener">Gearbest Link</a>
-      </li>
-
-      <li><strong>10. Anker PowerCore 10000</strong> — Compact portable charger with fast charging.<br />
-        <a href="https://www.amazon.com/dp/B07HBTY2ZK" target="_blank" rel="noopener">Amazon Link</a>
-      </li>
-    </ul>
-
-    <div style="margin-top: 2rem; text-align:center;">
-      <a href="market-battle.html">← Back: Amazon vs AliExpress</a> |
+    <nav class="nav">
       <a href="index.html">Home</a>
-    </div>
+      <a href="amazon-vs-aliexpress.html">Back to Article</a>
+    </nav>
   </main>
 </body>
 </html>
