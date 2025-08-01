@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Brains. Buttons. Borg.</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Brains. Buttons. Borg.</h1>
+    <p>The boldest smart tech curation.</p>
+  </header>
+  <main>
+    <section id="product-list">
+      <!-- Products will appear here -->
+    </section>
+  </main>
+
+  <script>
+    fetch("data/products.json")
+      .then(res => res.json())
+      .then(data => {
+        const container = document.getElementById("product-list");
+        data.products.forEach(p => {
+          const item = document.createElement("div");
+          item.innerHTML = `
+            <h2>${p.name}</h2>
+            <a href="${p.link}" target="_blank">
+              <img src="${p.image}" alt="${p.name}" />
+            </a>
+          `;
+          container.appendChild(item);
+        });
+      });
+  </script>
+</body>
+</html>
