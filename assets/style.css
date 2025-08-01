@@ -1,274 +1,48 @@
---- assets/style.css
-+++ assets/style.css
-@@ -1,100 +1,100 @@
--/* Старый стиль (если есть) - нужно заменить целиком */
--@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
--
--body {
--  margin: 0;
--  padding: 0;
--  font-family: 'Poppins', sans-serif;
--  background: linear-gradient(135deg, #6e7582, #a1a6ad); /* Серый металлический градиент */
--  color: #f0f0f0;
--  min-height: 100vh;
--  display: flex;
--  justify-content: center;
--  align-items: center;
--  overflow-x: hidden;
--}
--
--main.center {
--  text-align: center;
--  padding: 10vh 5vw;
--  max-width: 800px;
--  animation: fadeInUp 1s ease forwards;
--}
--
--h1 {
--  font-size: 3rem;
--  margin-bottom: 2rem;
--  font-weight: 700;
--  letter-spacing: 0.08em;
--  animation: fadeInDown 1s ease forwards;
--}
--
--span.borg {
--  color: #c0c0c0;
--  font-weight: 500;
--  text-shadow: 0 0 5px #fff;
--}
--
--.nav {
--  display: flex;
--  justify-content: center;
--  flex-wrap: wrap;
--  gap: 2rem;
--  margin-top: 2rem;
--}
--
--.nav a {
--  text-decoration: none;
--  font-weight: 500;
--  color: #dcdcdc;
--  border-bottom: 2px solid transparent;
--  padding-bottom: 3px;
--  position: relative;
--  transition: color 0.3s ease, border-color 0.3s ease;
--}
--
--.nav a::after {
--  content: '';
--  position: absolute;
--  left: 0;
--  bottom: 0;
--  width: 100%;
--  height: 2px;
--  background-color: #fff;
--  transform: scaleX(0);
--  transform-origin: right;
--  transition: transform 0.3s ease;
--}
--
--.nav a:hover {
--  color: #fff;
--  border-color: #fff;
--}
--
--.nav a:hover::after {
--  transform: scaleX(1);
--  transform-origin: left;
--}
--
--/* Анимации */
--
--@keyframes fadeInUp {
--  0% {
--    opacity: 0;
--    transform: translateY(30px);
--  }
--  100% {
--    opacity: 1;
--    transform: translateY(0);
--  }
--}
--
--@keyframes fadeInDown {
--  0% {
--    opacity: 0;
--    transform: translateY(-20px);
--  }
--  100% {
--    opacity: 1;
--    transform: translateY(0);
--  }
--}
--
--/* Кнопки */
--button, .btn {
--  background-color: #4a90e2;
--  color: #fff;
--  border: none;
--  padding: 0.6rem 1.4rem;
--  border-radius: 6px;
--  font-weight: 600;
--  cursor: pointer;
--  transition: background-color 0.3s ease, transform 0.2s ease;
--  box-shadow: 0 4px 6px rgba(74, 144, 226, 0.4);
--}
--
--button:hover, .btn:hover {
--  background-color: #357ABD;
--  transform: translateY(-3px);
--  box-shadow: 0 6px 10px rgba(53, 122, 189, 0.6);
--}
--
--/* Изображения */
--img {
--  max-width: 100%;
--  height: auto;
--  border-radius: 8px;
--  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
--  opacity: 0;
--  animation: fadeInImg 1s ease forwards;
--}
--
--@keyframes fadeInImg {
--  to {
--    opacity: 1;
--  }
--}
-+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
-+
-+body {
-+  margin: 0;
-+  padding: 0;
-+  font-family: 'Poppins', sans-serif;
-+  background: linear-gradient(135deg, #6e7582, #a1a6ad); /* Серый металлический градиент */
-+  color: #f0f0f0;
-+  min-height: 100vh;
-+  display: flex;
-+  justify-content: center;
-+  align-items: center;
-+  overflow-x: hidden;
-+}
-+
-+main.center {
-+  text-align: center;
-+  padding: 10vh 5vw;
-+  max-width: 800px;
-+  animation: fadeInUp 1s ease forwards;
-+}
-+
-+h1 {
-+  font-size: 3rem;
-+  margin-bottom: 2rem;
-+  font-weight: 700;
-+  letter-spacing: 0.08em;
-+  animation: fadeInDown 1s ease forwards;
-+}
-+
-+span.borg {
-+  color: #c0c0c0;
-+  font-weight: 500;
-+  text-shadow: 0 0 5px #fff;
-+}
-+
-+.nav {
-+  display: flex;
-+  justify-content: center;
-+  flex-wrap: wrap;
-+  gap: 2rem;
-+  margin-top: 2rem;
-+}
-+
-+.nav a {
-+  text-decoration: none;
-+  font-weight: 500;
-+  color: #dcdcdc;
-+  border-bottom: 2px solid transparent;
-+  padding-bottom: 3px;
-+  position: relative;
-+  transition: color 0.3s ease, border-color 0.3s ease;
-+}
-+
-+.nav a::after {
-+  content: '';
-+  position: absolute;
-+  left: 0;
-+  bottom: 0;
-+  width: 100%;
-+  height: 2px;
-+  background-color: #fff;
-+  transform: scaleX(0);
-+  transform-origin: right;
-+  transition: transform 0.3s ease;
-+}
-+
-+.nav a:hover {
-+  color: #fff;
-+  border-color: #fff;
-+}
-+
-+.nav a:hover::after {
-+  transform: scaleX(1);
-+  transform-origin: left;
-+}
-+
-+/* Анимации */
-+
-+@keyframes fadeInUp {
-+  0% {
-+    opacity: 0;
-+    transform: translateY(30px);
-+  }
-+  100% {
-+    opacity: 1;
-+    transform: translateY(0);
-+  }
-+}
-+
-+@keyframes fadeInDown {
-+  0% {
-+    opacity: 0;
-+    transform: translateY(-20px);
-+  }
-+  100% {
-+    opacity: 1;
-+    transform: translateY(0);
-+  }
-+}
-+
-+/* Кнопки */
-+button, .btn {
-+  background-color: #4a90e2;
-+  color: #fff;
-+  border: none;
-+  padding: 0.6rem 1.4rem;
-+  border-radius: 6px;
-+  font-weight: 600;
-+  cursor: pointer;
-+  transition: background-color 0.3s ease, transform 0.2s ease;
-+  box-shadow: 0 4px 6px rgba(74, 144, 226, 0.4);
-+}
-+
-+button:hover, .btn:hover {
-+  background-color: #357ABD;
-+  transform: translateY(-3px);
-+  box-shadow: 0 6px 10px rgba(53, 122, 189, 0.6);
-+}
-+
-+/* Изображения */
-+img {
-+  max-width: 100%;
-+  height: auto;
-+  border-radius: 8px;
-+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-+  opacity: 0;
-+  animation: fadeInImg 1s ease forwards;
-+}
-+
-+@keyframes fadeInImg {
-+  to {
-+    opacity: 1;
-+  }
-+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(145deg, #2f2f2f, #1c1c1c);
+  color: #f0f0f0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.container {
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.borg {
+  color: #00ffe7;
+  text-shadow: 0 0 5px #00ffe7;
+}
+
+nav a {
+  display: inline-block;
+  margin: 10px 15px;
+  color: #ccc;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  color: #00ffe7;
+  transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
