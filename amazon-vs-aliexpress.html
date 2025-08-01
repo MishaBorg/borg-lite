@@ -8,20 +8,20 @@
 </head>
 <body>
   <!-- Кнопка меню -->
-<div class="menu-btn" id="menu-btn">
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
+  <div class="menu-btn" id="menu-btn">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 
-<!-- Оверлей меню -->
-<nav class="menu-overlay" id="menu-overlay">
-  <a href="index.html">Home</a>
-  <a href="top-10-smart-gadgets.html">Top 10 Smart Gadgets</a>
-  <a href="why-smart-homes.html">Smart Homes</a>
-  <a href="amazon-vs-aliexpress.html">Amazon vs AliExpress</a>
-  <a href="gadgets.html">Gadget Picks</a>
-</nav>
+  <!-- Оверлей меню -->
+  <nav class="menu-overlay" id="menu-overlay">
+    <a href="index.html">Home</a>
+    <a href="top-10-smart-gadgets.html">Top 10 Smart Gadgets</a>
+    <a href="why-smart-homes.html">Smart Homes</a>
+    <a href="amazon-vs-aliexpress.html">Amazon vs AliExpress</a>
+    <a href="gadgets.html">Gadget Picks</a>
+  </nav>
 
   <main class="center">
     <h1>Amazon vs AliExpress: Who Wins the Gadget Game?</h1>
@@ -36,4 +36,50 @@
        <strong>Amazon:</strong> More curated, but offers top-tier brands and verified quality.</p>
 
     <h2>3. Pricing</h2>
-    <p><strong>AliExpress:</strong> Often cheaper, especially for accessories and off-brand tech
+    <p><strong>AliExpress:</strong> Often cheaper, especially for accessories and off-brand tech.<br />
+       <strong>Amazon:</strong> Higher prices, but more consistent quality and better support.</p>
+
+    <h2>4. Return Policy</h2>
+    <p><strong>Amazon:</strong> Best-in-class return and refund system.<br />
+       <strong>AliExpress:</strong> Improving, but still less convenient.</p>
+
+    <h2>Conclusion</h2>
+    <p>Use <strong>Amazon</strong> for speed, quality, and support. Use <strong>AliExpress</strong> for deals, variety, and experimentation. Smart buyers often use both!</p>
+  </main>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const menuOverlay = document.getElementById('menu-overlay');
+
+    menuBtn.addEventListener('click', () => {
+      menuBtn.classList.toggle('active');
+      menuOverlay.classList.toggle('active');
+    });
+
+    menuOverlay.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        menuBtn.classList.remove('active');
+        menuOverlay.classList.remove('active');
+      });
+    });
+  </script>
+  <script>
+  const menuBtn = document.getElementById('menu-btn');
+  const menuOverlay = document.getElementById('menu-overlay');
+
+  menuBtn.addEventListener('click', () => {
+    menuBtn.classList.toggle('active');
+    menuOverlay.classList.toggle('active');
+  });
+
+  // Закрываем меню при клике по ссылке
+  menuOverlay.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      menuBtn.classList.remove('active');
+      menuOverlay.classList.remove('active');
+    });
+  });
+</script>
+
+</body>
+</html>
