@@ -47,22 +47,7 @@
     <p>Use <strong>Amazon</strong> for speed, quality, and support. Use <strong>AliExpress</strong> for deals, variety, and experimentation. Smart buyers often use both!</p>
   </main>
 
-  <script>
-    const menuBtn = document.getElementById('menu-btn');
-    const menuOverlay = document.getElementById('menu-overlay');
 
-    menuBtn.addEventListener('click', () => {
-      menuBtn.classList.toggle('active');
-      menuOverlay.classList.toggle('active');
-    });
-
-    menuOverlay.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        menuBtn.classList.remove('active');
-        menuOverlay.classList.remove('active');
-      });
-    });
-  </script>
   <script>
   const menuBtn = document.getElementById('menu-btn');
   const menuOverlay = document.getElementById('menu-overlay');
