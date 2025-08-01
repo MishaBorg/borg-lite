@@ -1,0 +1,19 @@
+{
+  "products": [
+    {
+      "name": "Smart Watch Ultra",
+      "link": "https://www.amazon.com/dp/B0CHX9P8T5",
+      "image": "assets/watch.jpg"
+    },
+    {
+      "name": "AI Home Assistant",
+      "link": "https://www.aliexpress.com/item/1005004978390131.html",
+      "image": "assets/assistant.jpg"
+    },
+    {
+      "name": "Intelligent Light Bulb",
+      "link": "https://www.gearbest.com/smart-light-bulbs/pp_009821801236.html",
+      "image": "assets/bulb.jpg"
+    }
+  ]
+}
