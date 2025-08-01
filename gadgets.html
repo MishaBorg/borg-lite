@@ -45,5 +45,23 @@
       <a href="smart-homes.html">Next: Smart Homes</a>
     </div>
   </main>
+  <script>
+  const menuBtn = document.getElementById('menu-btn');
+  const menuOverlay = document.getElementById('menu-overlay');
+
+  menuBtn.addEventListener('click', () => {
+    menuBtn.classList.toggle('active');
+    menuOverlay.classList.toggle('active');
+  });
+
+  // Закрываем меню при клике по ссылке
+  menuOverlay.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      menuBtn.classList.remove('active');
+      menuOverlay.classList.remove('active');
+    });
+  });
+</script>
+
 </body>
 </html>
