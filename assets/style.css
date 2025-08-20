@@ -1,111 +1,156 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Libre+Caslon+Text:400,700&display=swap');
 
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(145deg, #2f2f2f, #1c1c1c);
-  color: #f0f0f0;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: fadeIn 1.2s ease-in-out;
+  font-family: Libre Caslon Text;
+  background-color: #FFAB91;
 }
 
-.container {
+.body-text {
+  padding-top: 20vh;
   text-align: center;
+  position: relative;
 }
 
-h1 {
-  font-size: 2.8rem;
-  font-weight: 700;
-  margin-bottom: 20px;
+.hamburger-icon {
+  position: absolute;
+  z-index: 1;
+  top: 5vh;
+  left: 5vw;
+  padding-bottom: 2vh;
 }
 
-.borg {
-  color: #00ffe7;
-  text-shadow: 0 0 5px #00ffe7;
-}
-
-nav a {
-  display: inline-block;
-  margin: 10px 15px;
-  color: #ccc;
-  text-decoration: none;
-  font-weight: 500;
-  transition: all 0.3s ease;
-}
-
-nav a:hover {
-  color: #00ffe7;
-  transform: scale(1.1);
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-/* Навигационное меню (overlay) */
-.menu-overlay {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100vw; height: 100vh;
-  background: rgba(20, 20, 20, 0.95);
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-.menu-overlay.active {
-  display: flex;
-}
-
-.menu-overlay a {
-  color: #00ffe7;
-  font-size: 2rem;
-  text-decoration: none;
-  margin: 1rem 0;
-  transition: color 0.3s ease;
-}
-
-.menu-overlay a:hover {
-  color: #66fff0;
-}
-
-/* Кнопка гамбургер */
-.menu-btn {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  width: 35px;
-  height: 30px;
-  cursor: pointer;
-  z-index: 1100;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.menu-btn span {
+.hamburger-icon span {
+  height: 5px;
+  width: 40px;
+  background-color: black;
   display: block;
-  height: 4px;
-  background: #00ffe7;
-  border-radius: 2px;
-  transition: all 0.3s ease;
+  margin: 5px 0px 5px 0px;
+  transition: 0.7s ease-in-out;
+  transform: none;
 }
 
-/* Анимация кнопки при открытом меню */
-.menu-btn.active span:nth-child(1) {
-  transform: rotate(45deg) translate(6px, 6px);
+#openmenu:checked ~ .menu-pane {
+  left: -5vw;
+  transform: translateX(-5vw);
 }
 
-.menu-btn.active span:nth-child(2) {
+#openmenu:checked ~ .body-text {
+display: none;
+}
+
+#openmenu:checked ~ .hamburger-icon span:nth-of-type(2) {
+  transform: translate(0%, 175%) rotate(-45deg);
+  background-color: white;
+}
+
+#openmenu:checked ~ .hamburger-icon span:nth-of-type(3) {
+  transform: rotate(45deg);
+  background-color: white;
+}
+
+#openmenu:checked ~ .hamburger-icon span:nth-of-type(1) {
   opacity: 0;
 }
 
-.menu-btn.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(6px, -6px);
+#openmenu:checked ~ .hamburger-icon span:nth-of-type(4) {
+  opacity: 0;
+}
+
+div.menu-pane {
+  background-color: #000;
+  position: absolute;
+  transform: translateX(-105vw);
+  transform-origin: (0, 0);
+  width: 100vw;
+  height: 100%;
+  transition: 0.6s ease-in-out;
+}
+
+.menu-pane p {
+  color: black;
+  font-size: 0.6em;
+}
+
+.menu-pane nav {
+  padding: 10%;
+}
+
+.menu-links li, a, span {
+      transition: 0.5s ease-in-out;
+}
+
+.menu-pane ul {
+  padding: 10%;
+  display: inline-block;
+}
+
+.menu-pane li {
+  padding-top: 5px;
+  padding-bottom: 20px;
+  margin-left: 10px;
+    font-size: 1em;
+}
+
+
+.menu-pane li:first-child {
+  font-size: 1.3em;
+  margin-left: -10px;
+}
+
+
+.menu-links li a {
+  color: white;
+  text-decoration: none;
+}
+
+
+.menu-links li:hover a {
+  color: #FFAB91;
+}
+
+.menu-links li:first-child:hover a {
+  color: black;  
+  background-color: #FFAB91;
+}
+
+#QC-info {
+  background-color: #FFAB91;
+    border: 2px solid;
+  border-color: #FFAB91;
+display: block;
+  opacity: 0;
+  
+}
+
+.menu-links li:first-child:hover #QC-info {
+opacity: 1;
+}
+
+.menu-links li:first-child:hover #DC-info {
+opacity: 1;
+}
+
+#DC-info {
+  background-color: #FFAB91;
+    border: 2px solid;
+  border-color: #FFAB91;
+display: block;
+  opacity: 0;
+}
+
+
+.menu-links li:first-child a {
+  padding: 5px;
+}
+
+
+
+input.hamburger-checkbox {
+  position: absolute;
+  z-index: 3;
+  top: 5vh;
+  left: 5vw;
+  width: 10vw;
+  opacity: 0;
+  height: 6vh;
 }
